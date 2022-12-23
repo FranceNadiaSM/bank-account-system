@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Account;
 use App\Models\Client;
 use App\Models\TransactionDetail;
+use App\Models\BalanceRecord;
 use PDF;
 
 class DetailsServicesController extends Controller
@@ -36,12 +37,13 @@ class DetailsServicesController extends Controller
                                         ->whereBetween('date_of_transaction', [$request->date1, $request->date2])
                                         ->get();
         $clients = Client::where('id', $account->client_id)->first();
+        $balance = BalanceRecord::where('account_id', $account->id)->first();
 
         //período
         $data1 = date('d-m-Y', strtotime($request->date1));
         $data2 = date('d-m-Y', strtotime($request->date2));
         
-        return PDF::loadView('services.rel_services', ['transations' => $transations, 'clients' =>$clients,
+        return PDF::loadView('services.rel_services', ['transations' => $transations, 'clients' =>$clients, 'balance' => $balance,
                                                     'data1' => $data1,'data2' => $data2])
                                                 ->stream();
 

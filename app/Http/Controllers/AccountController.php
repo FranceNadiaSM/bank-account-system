@@ -108,7 +108,7 @@ class AccountController extends Controller
             $balance->save();
         }
 
-        return view('home');
+        return view('account.create');
     }
 
     public function show($id)
@@ -185,7 +185,7 @@ class AccountController extends Controller
             $account->number = $request->number;
             $account->save();
             
-        return view('home');
+            return view('account.create');
     }
 
     public function show_delete()
@@ -211,6 +211,6 @@ class AccountController extends Controller
         $account->delete();
         $client->delete();
         
-        return view('home');
+        return view('account.create');
     }
 }

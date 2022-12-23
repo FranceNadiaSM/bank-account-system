@@ -29,6 +29,13 @@
         </tr>
         @endforeach
     </table>
+
+    <table class="table table-bordered">
+        <tr>
+            <th><h2> Saldo atual: {{ $balance->current_balance}}</h2></th>
+        </tr>
+        
+    </table>
   
 </body>
 </html>
