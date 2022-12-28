@@ -7,12 +7,14 @@ O sistema conta com funcionalidades como Exibir saldo, Depósito, Saque e Relat�
 <br/>
 No dashboard contém alguns gráficos para exibir informações sobre a conta.
 
-## instalação
+## Instalação
+Inicialmente é necessário ter o **PHP >= 7.4** instalado  juntamente com o **Composer**.
 ```terminal
 composer install
+
 ```
 ## Usage
-Pode configurar os dados do banco no arquivo .env tem o .env.example para seguir como exemplo
+Pode configurar os dados do banco no arquivo ```.env``` com os dados do seu host.<br/> O ```.env.example``` serve como exemplo:
 ```php
 DB_DRIVER=pgsql
 DB_HOST=localhost
@@ -22,13 +24,21 @@ DB_USERNAME=postgres
 DB_PASSWORD=password
 ```
 
-Usuario e senha de acesso
+## Execução
+```terminal
+php artisan migrate
+php artisan db:seed
+php artisan serve
+
+```
+
+**Usuário e senha de acesso**
 ```php
-usuario: teste@simpleshotel.com
+usuário: teste@simpleshotel.com
 senha: 123456
 ```
 
-#### **Bank-account-system**
+### **Bank-account-system**
 ##### **Template AdimLTE 3**
 ![System Bank](systemBank1.png)
 
