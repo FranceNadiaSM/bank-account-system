@@ -21,7 +21,7 @@ class CreateBalanceRecordsTable extends Migration
 
 
             $table->timestamps();
-            $table->foreign('account_id')->references('id')->on('account')->onDelete('cascade');
+            $table->foreign('account_id')->references('id')->on('accounts')->onDelete('cascade');
         });
     }
 
