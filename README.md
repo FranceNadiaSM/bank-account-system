@@ -7,6 +7,27 @@ O sistema conta com funcionalidades como Exibir saldo, Depósito, Saque e Relat�
 <br/>
 No dashboard contém alguns gráficos para exibir informações sobre a conta.
 
+## instalação
+```terminal
+composer install
+```
+## Usage
+Pode configurar os dados do banco no arquivo .env tem o .env.example para seguir como exemplo
+```php
+DB_DRIVER=pgsql
+DB_HOST=localhost
+DB_PORT=5432
+DB_DATABASE=simpleshotel
+DB_USERNAME=postgres
+DB_PASSWORD=password
+```
+
+Usuario e senha de acesso
+```php
+usuario: teste@simpleshotel.com
+senha: 123456
+```
+
 #### **Bank-account-system**
 ##### **Template AdimLTE 3**
 ![System Bank](systemBank1.png)
