@@ -24,7 +24,7 @@
         <input type="text" name="cpf" value="{{ $client->cpf }}"><br/>
 
         <label for="">Data de Nascimento</label> <br/>
-        <input type="text" name="birth" value="{{ $client->birth }}"><br/>
+        <input type="date" name="birth" value="{{ $client->birth }}"><br/>
 
         <label for="">Sexo</label> <br/>
         <input type="text" name="sex" value="{{ $client->sex }}"><br/>

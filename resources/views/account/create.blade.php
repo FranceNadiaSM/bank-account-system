@@ -27,7 +27,7 @@
         <input type="text" name="cpf" value="{{ old('cpf') }}"><br/>
 
         <label for="">Data de Nascimento</label> <br/>
-        <input type="text" name="birth" value="{{ old('birth') }}"><br/>
+        <input type="date" name="birth" value="{{ old('birth') }}"><br/>
 
         <label for="">Sexo</label> <br/>
             <select name="sex" value="{{ old('sex') }}">

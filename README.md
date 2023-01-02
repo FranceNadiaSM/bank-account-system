@@ -8,34 +8,38 @@ O sistema conta com funcionalidades como Exibir saldo, Depósito, Saque e Relat�
 No dashboard contém alguns gráficos para exibir informações sobre a conta.
 
 ## Instalação
-Inicialmente é necessário ter o **PHP >= 7.4** instalado  juntamente com o **Composer**.
-```terminal
-composer install
-
+Inicialmente é necessário ter o **PHP >= 7.4** instalado, juntamente com o **Composer**.
+Em seguida, dentro da pasta do projeto no terminal, execute:
 ```
-## Usage
-Pode configurar os dados do banco no arquivo ```.env``` com os dados do seu host.<br/> O ```.env.example``` serve como exemplo:
-```php
-DB_DRIVER=pgsql
+composer install
+```
+## Uso
+Configure os dados do banco no arquivo ``.env`` com as informações do banco de dados que você tiver criado no seu ambiente local.<br/> O ``.env.example`` serve como exemplo:
+```
+DB_DRIVER=mysql
 DB_HOST=localhost
-DB_PORT=5432
-DB_DATABASE=simpleshotel
-DB_USERNAME=postgres
-DB_PASSWORD=password
+DB_PORT=3306
+DB_DATABASE=name_database
+DB_USERNAME=user_database
+DB_PASSWORD=password_database
 ```
 
 ## Execução
-```terminal
+No terminal, dentro da pasta do projeto execute:
+```
+php artisan key:generate
 php artisan migrate
 php artisan db:seed
 php artisan serve
-
 ```
 
 **Usuário e senha de acesso**
-```php
-usuário: teste@simpleshotel.com
-senha: 123456
+Após subir o servidor, aparecerá o endereço de acesso parecido com ``http://127.0.0.1:8000``. Ao abri-lo no navegador, cadastre o usuário e a senha para acessar.
+<br/> Exemplo:
+
+```
+usuário: test@email.com
+senha: password1234
 ```
 
 ### **Bank-account-system**

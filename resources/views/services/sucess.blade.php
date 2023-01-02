@@ -17,7 +17,7 @@
         <p> <b>Nome:</b> {{ $name }} </p>
         <p> <b>Agência:</b> {{ $branch }} </p>
         <p> <b>Conta:</b> {{ $number }} </p> <br/>
-        <p> <b>Valor do {{ $type }}:</b> {{ $val }} </p> <br/>
+        <p> <b>Valor do {{ $type }}:</b> R$ {{ $val }} </p> <br/>
 
     </form>
 

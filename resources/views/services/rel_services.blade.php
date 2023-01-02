@@ -32,7 +32,7 @@
 
     <table class="table table-bordered">
         <tr>
-            <th><h2> Saldo atual: {{ $balance->current_balance}}</h2></th>
+            <th><h2> Saldo atual: R$ {{ $balance->current_balance}}</h2></th>
         </tr>
         
     </table>
